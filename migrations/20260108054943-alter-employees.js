@@ -10,14 +10,14 @@ module.exports = {
 
     await queryInterface.changeColumn('Employees', 'address', {
       type: Sequelize.STRING,
-      allowNull: true  // Change this to your desired modification
+      allowNull: true
     });
   },
 
   async down(queryInterface, Sequelize) {
     await queryInterface.changeColumn('Employees', 'address', {
       type: Sequelize.STRING,
-      allowNull: false  // Revert to original state
+      allowNull: false
     });
 
     await queryInterface.removeColumn('Employees', 'notes');
