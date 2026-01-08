@@ -6,7 +6,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-  
     await queryInterface.addConstraint('Users', {
       fields: ['employeeId'],
       type: 'foreign key',
